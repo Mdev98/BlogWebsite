@@ -5,7 +5,15 @@
 
 {{#each posts}}
     <h1>{{this.title}}</h1>
-    <p>{{this.content}}<a href='/posts/{{this.title}}'>Read More</a></p>    
+    <p>{{this.content}}</p> 
+    <div>
+        <span style="color: #929292;">{{this.createdAt}}</span>
+        <a href='/posts/{{this.title}}'>Read More</a> 
+    </div>
+        
+        
+          
 {{/each}}
+
 
 {{>footer}}

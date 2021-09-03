@@ -10,7 +10,20 @@ const postSchema = new mongoose.Schema({
         type: String,
         required : true
     }
+},{
+    timestamps : true
 })
+
+postSchema.methods.toJSON = function () {
+    const post = this 
+    const postObj = post.toObject()
+    postObj.owner = {
+        name : "Mamour"
+    }
+
+    return postObj
+}
+
 
 const postModel = mongoose.model('post',postSchema)
 
