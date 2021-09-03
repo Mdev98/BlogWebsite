@@ -1,0 +1,17 @@
+{{>header}}
+
+<h1>{{title}}</h1>
+<form action="/compose" method='post'>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Title</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name = "postTitle">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Post</label>
+        <textarea class="form-control" id="formGroupExampleInput2" name = "postBody" cols="40" rows="5"></textarea>
+    </div>
+    <br>
+    <button class="btn btn-primary">Publish</button>
+</form>
+
+{{>footer}}

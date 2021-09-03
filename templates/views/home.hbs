@@ -1,0 +1,11 @@
+{{>header}}
+
+<h1>{{title}}</h1>
+<p>{{homeStartingContent}}</p>
+
+{{#each posts}}
+    <h1>{{this.title}}</h1>
+    <p>{{this.content}}<a href='/posts/{{this.title}}'>Read More</a></p>    
+{{/each}}
+
+{{>footer}}
